@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pass Phrase</title>
+    <link href="lab_2.css" rel="stylesheet" type="text/css" media="all">
+    
+</head>
+
+
+<body class="grid">
+	<script>
+
+/*my functions for all three buttons*/
+
+	function firstFunction() {
+		var passphrase = document.getElementById("field1").value;
+		document.getElementById("output_one").innerHTML = passphrase;
+		document.getElementById("output_one_a").innerHTML = passphrase.toUpperCase();
+		document.getElementById("output_one_b").innerHTML = passphrase.toLowerCase();
+		document.getElementById("output_one_c").innerHTML = passphrase.length;
+
+	}
+
+
+	function secondFunction() {
+		var passphrase = document.getElementById("field1").value;
+		document.getElementById("output_two").innerHTML = passphrase.split(" ");
+		var passphraseArray = [ passphrase];
+		document.getElementById("output_two_a").innerHTML = passphraseArray;
+
+	}
+
+	function thirdFunction() {
+		var passphrase = document.getElementById("field1").value;
+		document.getElementById("output_three").innerHTML = passphrase.split("");
+		var passphraseRev = passphrase.split("");
+		document.getElementById("output_three_a").innerHTML = passphraseRev.reverse();
+		document.getElementById("output_three_b").innerHTML = passphraseRev.sort();
+		
+	}
+
+</script>
+
+<header>
+	<h1>What is your secret pass phrase?</h1>
+</header>
+
+<div class="itemFive">
+<p>Please Enter four word Pass Phrase.</p>
+
+<input type="text" id="field1">
+</div>
+
+<div class="itemTwo">
+<!--button one-->
+<button id="button_a" class="button" onclick="firstFunction()">Button A</button>
+
+
+<!--button one output-->
+<p id="output_one"></p>
+<p id="output_one_a"></p>
+<p id="output_one_b"></p>
+<p id="output_one_c"></p>
+</div>
+
+<div class="itemThree">
+<!--button two-->
+<button id="button_b" class="button" onclick="secondFunction()">Button B</button>
+
+<!--button two output-->
+<p id="output_two"></p>
+<p id="output_two_a"></p>
+</div>
+
+<div class="itemFour">
+
+<!--button 3-->
+<button id="button_c" class="button" onclick="thirdFunction()">Button C</button>
+<!--button three output-->
+<p id="output_three"></p>
+<p id="output_three_a"></p>
+<p id="output_three_b"></p>
+
+</div>
+
+
+
+<footer>
+	<p><div>
+		Webmaster: Meghan Carlson<br>
+		Date: 9-26-20
+	</div>
+</footer>
+
+</body>
+</html>
